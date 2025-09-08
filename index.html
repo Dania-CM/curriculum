@@ -1,26 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
-<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Currículum — Tu Nombre</title>
+  
+  <!-- SEO -->
+  <title>Currículum de Dania Condori Martinez</title>
+  <meta name="description" content="Currículum de Dania Condori Martinez: formación académica, habilidades, experiencia en desarrollo web y proyectos realizados." />
+
   <link rel="stylesheet" href="estilos.css" />
+
+  <!-- Datos estructurados (Schema.org Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Dania Condori Martinez",
+    "email": "condirimartinezdania@gmail.com",
+    "jobTitle": "Desarrolladora Frontend",
+    "url": "https://github.com/Dania-CM"
+  }
+  </script>
 </head>
 <body>
-  <header class="header">
+  <!-- Skip link -->
+  <a href="#contenido" class="skip-link">Saltar al contenido principal</a>
+
+  <header class="header" role="banner">
     <div class="container header-inner">
-      <img src="yo.jpg" alt="Avatar de Tu Nombre" class="avatar" />
+      <img src="yo.jpg" alt="Fotografía de Dania Condori Martinez" class="avatar" loading="lazy" />
       <div class="titulo">
-        <h1>DANIA CONDORI MARTINEZo</h1>
-        <p class="subtitulo">Fecha de Nacimiento:07-05-2001</p>
+        <h1>Dania Condori Martinez</h1>
+        <p class="subtitulo">Fecha de Nacimiento: 07-05-2001</p>
+        <p>Teléfono: <span aria-label="Teléfono móvil">73296476</span></p>
       </div>
     </div>
+    <!-- Ejemplo de nav -->
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a href="#resumen">Resumen</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#proyecto">Proyecto</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main class="container">
-    <section class="card resumen">
+  <main id="contenido" class="container" role="main">
+    <section id="resumen" class="card resumen">
       <h2>Resumen</h2>
       <p>
         Soy una persona proactiva con interés en desarrollo web. Me especializo en HTML y CSS,
@@ -30,15 +58,16 @@
     </section>
 
     <section class="grid">
-      <article class="card educacion">
+      <article id="formacion" class="card educacion">
         <h2>Formación académica</h2>
         <ul>
-          <li><strong>Tecnico Supperior en Sistemas Informáticos</strong> — Instituto Tecnico de Educacion Comercial Americano (2025)</li>
+          <li><strong>Técnico Superior en Sistemas Informáticos</strong> — Instituto Técnico de Educación Comercial Americano (2024)</li>
+          <li><strong>Técnico Superior en Contaduría Pública</strong> — Universidad Pública de El Alto (2024)</li>
           <li><strong>Cursos:</strong> Diseño web con HTML/CSS, Accesibilidad web, Laravel</li>
         </ul>
       </article>
 
-      <aside class="card habilidades">
+      <aside id="habilidades" class="card habilidades">
         <h2>Habilidades</h2>
         <ul class="skills">
           <li>HTML5 (semántico)</li>
@@ -49,24 +78,43 @@
       </aside>
     </section>
 
-    <section class="card proyecto">
+    <section id="proyecto" class="card proyecto">
       <h2>Experiencia / Proyecto</h2>
-      <h3>Proyecto: "Tienda de prueba"</h3>
+      <h3>Proyecto: "Sistema Web para la Autoescuela Z"</h3>
       <p>
         Desarrollé la interfaz estática de una tienda online usando HTML semántico, CSS Grid
         para el layout y componentes reutilizables. Implementé una versión accesible del menú y
-        fichas de productos adaptables a móviles.
+        fichas de productos adaptables a móviles, incluyendo reportes de la prueba escrita y práctica, adecuados a SEGIP.
       </p>
       <ul>
         <li>Rol: Frontend</li>
         <li>Duración: 2 meses</li>
-        <li>Tecnologías: HTML, CSS puro</li>
+        <li>Tecnologías: HTML, CSS</li>
       </ul>
+    </section>
+
+    <!-- Ejemplo de formulario accesible -->
+    <section class="card contacto">
+      <h2>Formulario de contacto</h2>
+      <form>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required />
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje"></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
     </section>
   </main>
 
-  <footer class="footer container">
-    <p>Contacto: tu.email@ejemplo.com · GitHub: <a href="https://github.com/tuusuario">tuusuario</a></p>
+  <footer id="contacto" class="footer container" role="contentinfo">
+    <p>Contacto: <a href="mailto:condirimartinezdania@gmail.com">condirimartinezdania@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Dania-CM" target="_blank" rel="noopener">Dania-CM</a></p>
   </footer>
 </body>
 </html>
+
